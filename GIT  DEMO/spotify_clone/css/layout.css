@@ -1,0 +1,66 @@
+/* ============================================
+   LAYOUT.CSS - Main Grid & Structure
+   ============================================ */
+
+.app {
+  display: flex;
+  height: calc(100vh - 64px - 140px);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1;
+  padding: 28px 32px 100px;
+  overflow-y: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+.topbar__search {
+  flex: 1;
+  max-width: 300px;
+  background: var(--bg-tertiary);
+  padding: 10px 14px;
+  border-radius: 18px;
+  border: none;
+  color: var(--text-primary);
+  font-family: inherit;
+}
+
+.topbar__search:focus {
+  outline: none;
+  background: var(--bg-tertiary);
+  box-shadow: 0 0 0 2px var(--accent-primary);
+}
+
+.topbar__profile {
+  background: var(--bg-tertiary);
+  padding: 8px 12px;
+  border-radius: 14px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+/* Scrollbar Styling */
+.main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

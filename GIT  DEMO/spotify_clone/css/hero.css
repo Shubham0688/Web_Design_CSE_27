@@ -1,0 +1,76 @@
+/* ============================================
+   HERO.CSS - Playlist Hero Section
+   ============================================ */
+
+.hero {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  padding: 18px 0 32px;
+  margin-bottom: 22px;
+}
+
+.hero__cover {
+  flex-shrink: 0;
+}
+
+.hero__cover-art {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero__type {
+  font-size: 12px;
+  color: var(--text-secondary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero__meta {
+  color: var(--text-secondary);
+  margin: 8px 0 12px;
+  font-size: 14px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.hero__actions .btn {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__cover-art {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero__title {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,49 @@
+/* ============================================
+   HEADER.CSS - Global Top Header
+   ============================================ */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: linear-gradient(180deg, var(--bg-tertiary), var(--bg-secondary));
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  z-index: 40;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 24px;
+}
+
+.header__brand {
+  color: var(--accent-primary);
+  font-weight: 700;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.header__nav {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+}
+
+.header__link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.header__link:hover {
+  color: var(--text-primary);
+}

@@ -1,0 +1,7 @@
+# Old CSS files
+styles.css
+extra.css
+
+# System
+.DS_Store
+Thumbs.db

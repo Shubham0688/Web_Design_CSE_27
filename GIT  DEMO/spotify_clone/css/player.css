@@ -1,0 +1,133 @@
+/* ============================================
+   PLAYER.CSS - Bottom Player Bar
+   ============================================ */
+
+.player {
+  position: fixed;
+  left: 220px;
+  right: 0;
+  bottom: 48px;
+  height: 88px;
+  background: linear-gradient(180deg, rgba(18, 18, 18, 0.95), rgba(10, 10, 10, 0.95));
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 20px;
+  border-top: 1px solid var(--border-color);
+  z-index: 30;
+}
+
+.player__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.player__thumbnail {
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  flex-shrink: 0;
+}
+
+.player__track-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.player__track-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.player__track-artist {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.player__center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.player__controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.player__btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px 8px;
+  transition: color 0.2s ease;
+}
+
+.player__btn:hover {
+  color: var(--accent-primary);
+}
+
+.player__progress {
+  width: 60%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.player__progress-bar {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-hover));
+}
+
+.player__right {
+  min-width: 100px;
+  text-align: right;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.player__volume {
+  display: inline-block;
+}
+
+@media (max-width: 900px) {
+  .player {
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .player {
+    height: 100px;
+    padding: 8px 16px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .player__left {
+    min-width: auto;
+    flex: 1;
+  }
+
+  .player__center {
+    flex: 1;
+  }
+
+  .player__right {
+    min-width: auto;
+  }
+}

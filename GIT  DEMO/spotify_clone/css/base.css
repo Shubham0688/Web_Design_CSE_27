@@ -1,0 +1,58 @@
+/* ============================================
+   BASE.CSS - Global Defaults & Utilities
+   ============================================ */
+
+:root {
+  --bg-primary: #0f0f12;
+  --bg-secondary: #0b0b0c;
+  --bg-tertiary: #0d0d0e;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --accent-primary: #1db954;
+  --accent-hover: #7ef7b6;
+  --border-color: rgba(255, 255, 255, 0.03);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  color: var(--text-primary);
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  margin: 0;
+  padding-top: 64px;
+  padding-bottom: 140px;
+  min-height: 100vh;
+}
+
+/* Button Styles */
+.btn {
+  border: 0;
+  padding: 10px 18px;
+  border-radius: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.btn--primary {
+  background: var(--accent-primary);
+  color: #000;
+}
+
+.btn--primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn--secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+}
+
+.btn--secondary:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,100 @@
+/* ============================================
+   TRACKS.CSS - Track List Styles
+   ============================================ */
+
+.tracks {
+  margin-top: 22px;
+}
+
+.tracks__header {
+  display: grid;
+  grid-template-columns: 40px 1fr 220px 80px;
+  gap: 16px;
+  padding: 12px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tracks__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.track-item {
+  display: grid;
+  grid-template-columns: 40px 1fr 220px 80px;
+  gap: 16px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 6px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.track-item:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.track-item__num {
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-align: center;
+}
+
+.track-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.track-item__title {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.track-item__artist {
+  color: var(--text-secondary);
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.track-item__album {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.track-item__time {
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-align: right;
+}
+
+@media (max-width: 1024px) {
+  .tracks__header,
+  .track-item {
+    grid-template-columns: 40px 1fr 140px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tracks__header,
+  .track-item {
+    grid-template-columns: 1fr;
+  }
+
+  .track-item {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+  }
+
+  .tracks__col-num,
+  .track-item__num {
+    display: none;
+  }
+}
